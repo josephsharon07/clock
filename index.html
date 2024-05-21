@@ -9,17 +9,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>clock</title>
+    <title>Clock</title>
 </head>
 <body>
     <section class="hero">
         <h1 id="time">T I M E</h1><br><br>
         <h1 data-aos="fade-up" data-aos-duration="1500" id="clock"></h1>
         <section data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500" id="mmddyy"></section>
+        <p class="animate__animated animate__fadeInLeft animate__delay-3s" id="temp">
+            <a>Temperature : <a id="temperature"></a></a><br>
+            <a>Feels Like : <a id="feels"></a></a>
+        </p>
+        <p class="animate__animated animate__fadeInRight animate__delay-4s" id="humipre">
+            <a>Pressure : <a id="pressure"></a></a><br>
+            <a>Humidity : <a id="humidity"></a></a>
+        </p>
     </section>
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
