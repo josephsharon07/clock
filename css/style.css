@@ -15,7 +15,7 @@
     height: 100vh;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: start;
     display: flex;
     flex-direction: column;
     background: radial-gradient( #202020 , #161616);
@@ -37,8 +37,9 @@
     font-size: 10vw;
     font-weight: lighter;
     font-family: "Azeret Mono";
-    word-spacing: 10px;
-    padding-bottom: 100px;
+    word-spacing: 5px;
+    padding-bottom: 25px;
+    padding-top: 50px;
     color: white;
     padding-left: 40px;
     padding-right: 40px;
@@ -91,7 +92,7 @@
         font-size: 2vw;
     }
     #clock{
-        font-size: 12.2vw;
+        font-size: 10vw;
     }
 }
 @media (max-width:500px){

@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById('pressure').innerText = `${pressure} hPa`;
             document.getElementById('humidity').innerText = `${humidity} %`;
             document.getElementById('description').innerText = `${description.toUpperCase()}`;
-            document.getElementById('icon').src = `https://openweathermap.org/img/wn/${icon}@4x.png`;
-            console.log("Wheater Updatead");
+            document.getElementById('icon').src = `icons/${icon}@4x.png`;
+            setTimeout(currentTemperature, 100000);
         } catch (error) {
             console.error("Error fetching the temperature:", error);
         }
@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("clock").innerText = time;
 
         setTimeout(currentTime, 1000);
-        setTimeout(currentTemperature, 10000);
     }
 
     currentTemperature();
