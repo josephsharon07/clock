@@ -6,12 +6,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             let data = await response.json();
+            let { description, icon } = data.weather[0];
             let { temp, feels_like, pressure, humidity } = data.main;
-
             document.getElementById('temperature').innerText = `${temp} °C`;
             document.getElementById('feels').innerText = `${feels_like} °C`;
             document.getElementById('pressure').innerText = `${pressure} hPa`;
             document.getElementById('humidity').innerText = `${humidity} %`;
+            document.getElementById('description').innerText = `${description.toUpperCase()}`;
+            document.getElementById('icon').src = `https://openweathermap.org/img/wn/${icon}@4x.png`;
             console.log("Wheater Updatead");
         } catch (error) {
             console.error("Error fetching the temperature:", error);
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("clock").innerText = time;
 
         setTimeout(currentTime, 1000);
-        setTimeout(currentTemperature, 60000);
+        setTimeout(currentTemperature, 10000);
     }
 
     currentTemperature();
