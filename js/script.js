@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     async function currentTemperature() {
         try {
-            let response = await fetch('https://api.openweathermap.org/data/2.5/weather?q=Aralvaimozhi&units=metric&APPID=991abfe98a5b1cbcd90f5eee7c796443');
+            let response = await fetch('https://api.openweathermap.org/data/2.5/weather?lat=8.254103&lon=77.518549&APPID=991abfe98a5b1cbcd90f5eee7c796443');
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             let data = await response.json();
             let { description, icon } = data.weather[0];
             let { temp, feels_like, pressure, humidity } = data.main;
-            document.getElementById('temperature').innerText = `${temp} °C`;
-            document.getElementById('feels').innerText = `${feels_like} °C`;
+            document.getElementById('temperature').innerText = `${temp/100} °C`;
+            document.getElementById('feels').innerText = `${feels_like/100} °C`;
             document.getElementById('pressure').innerText = `${pressure} hPa`;
             document.getElementById('humidity').innerText = `${humidity} %`;
             document.getElementById('description').innerText = `${description.toUpperCase()}`;
