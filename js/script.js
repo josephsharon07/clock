@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             let { description, icon } = data.weather[0];
             let { temp, feels_like, pressure, humidity } = data.main;
             document.getElementById('temperature').innerText = `${temp/10} °C`;
-            document.getElementById('feels').innerText = `${feels_like/10} °C`;
             document.getElementById('pressure').innerText = `${pressure} hPa`;
             document.getElementById('humidity').innerText = `${humidity} %`;
             document.getElementById('description').innerText = `${description.toUpperCase()}`;
